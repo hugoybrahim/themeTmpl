@@ -7,4 +7,6 @@
     <?php wp_head(); ?>
 </head>
 <body class="">
+    <?php wp_body_open(); ?>
+    <?php the_custom_logo(); //Logo for webpage from custom theme ?>
    

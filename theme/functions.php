@@ -35,3 +35,18 @@ function register_my_menu() {
     register_nav_menu('primary-menu', __('Primary Menu'));
 }
 add_action('after_setup_theme', 'register_my_menu');
+
+
+// Add Theme supports
+
+function my_theme_supports() {
+    add_theme_support( "title-tag"); // If you don't want to put a title in the header
+    add_theme_support("post-thumbnails"); // Thumbnail image for a post or page
+    add_theme_support("custom-logo",array(
+        "width"         => 170,
+        "height"        => 35,
+        "flex-width"    => true,
+        "flex-height"   => true,
+    )); //
+}
+add_action( "after_setup_theme","my_theme_supports" );
